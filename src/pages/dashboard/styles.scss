@@ -1,0 +1,29 @@
+main {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+
+  & header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    & .search {
+      margin-top: 100px;
+    }
+  }
+}
+
+@media only screen and (min-width: 786px) {
+  header,
+  .search-results {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header,
+  .search-results {
+    width: 976px;
+  }
+}

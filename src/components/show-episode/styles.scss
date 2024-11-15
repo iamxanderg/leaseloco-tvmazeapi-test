@@ -1,0 +1,20 @@
+.episode-list {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+
+  & h2 {
+    border-left: 4px solid #009100;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 10px;
+  }
+}
+
+.episode-details {
+  padding-bottom: 20px;
+
+  & .episode-title {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,71 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 40px;
+
+  & a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-within {
+      filter: brightness(80%);
+
+      & p {
+        color: #0051ad;
+        text-decoration: none;
+
+        &:hover {
+          color: #0051ad;
+        }
+      }
+    }
+
+    & img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: contain;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(80%);
+
+        & + p {
+          color: #0051ad;
+        }
+      }
+    }
+
+    & p {
+      padding-top: 10px;
+      color: #000000;
+
+      &:hover {
+        color: #0051ad;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
